@@ -14,6 +14,7 @@
 		B7060DB51EE35CCB00277ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7060DB41EE35CCB00277ED3 /* Assets.xcassets */; };
 		B7060DB81EE35CCB00277ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7060DB61EE35CCB00277ED3 /* LaunchScreen.storyboard */; };
 		B7060DC31EE35CCB00277ED3 /* FakeTwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DC21EE35CCB00277ED3 /* FakeTwitterTests.m */; };
+		B7060DCF1EE35E0C00277ED3 /* TweetListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		B7060DBE1EE35CCB00277ED3 /* FakeTwitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeTwitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7060DC21EE35CCB00277ED3 /* FakeTwitterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeTwitterTests.m; sourceTree = "<group>"; };
 		B7060DC41EE35CCB00277ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7060DCD1EE35E0C00277ED3 /* TweetListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetListTableViewController.h; sourceTree = "<group>"; };
+		B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				B7060DB61EE35CCB00277ED3 /* LaunchScreen.storyboard */,
 				B7060DB91EE35CCB00277ED3 /* Info.plist */,
 				B7060DA81EE35CCB00277ED3 /* Supporting Files */,
+				B7060DCD1EE35E0C00277ED3 /* TweetListTableViewController.h */,
+				B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */,
 			);
 			path = FakeTwitter;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7060DB01EE35CCB00277ED3 /* LoginViewController.m in Sources */,
+				B7060DCF1EE35E0C00277ED3 /* TweetListTableViewController.m in Sources */,
 				B7060DAD1EE35CCB00277ED3 /* AppDelegate.m in Sources */,
 				B7060DAA1EE35CCB00277ED3 /* main.m in Sources */,
 			);
