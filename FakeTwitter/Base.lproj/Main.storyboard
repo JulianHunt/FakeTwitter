@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--LoginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="LoginViewController" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="LoginViewController" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,11 +18,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="574-ds-qo0">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-mE-S4E">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6uw-Uv-m2w"/>
+                                    <constraint firstAttribute="height" constant="60" id="wgi-3C-29G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-xO-yDT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-pP-djC">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEj-SD-8mW">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="0.15462647737994617" green="0.4989634169686411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-fv-R4j">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itd-KV-7l2">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwF-WY-f3c">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.072889895858135878" green="0.6352823730705125" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leading" secondItem="bYk-pP-djC" secondAttribute="leading" constant="-32" id="35D-Mw-IYt"/>
+                            <constraint firstItem="sk8-xO-yDT" firstAttribute="top" secondItem="574-ds-qo0" secondAttribute="bottom" constant="8" id="Fj9-yR-wxs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bYk-pP-djC" secondAttribute="bottom" constant="32" id="GB4-Y0-vbu"/>
+                            <constraint firstAttribute="leading" secondItem="j7M-mE-S4E" secondAttribute="leading" constant="-32" id="U2O-U2-I5w"/>
+                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="j7M-mE-S4E" secondAttribute="top" constant="8" id="V6b-un-UyU"/>
+                            <constraint firstItem="574-ds-qo0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Y37-K4-02C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sk8-xO-yDT" secondAttribute="trailing" constant="155" id="gpa-3h-d4X"/>
+                            <constraint firstAttribute="leading" secondItem="574-ds-qo0" secondAttribute="leading" constant="-32" id="k0d-Wa-qNC"/>
+                            <constraint firstItem="bYk-pP-djC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-32" id="nN6-mg-fgl"/>
+                            <constraint firstItem="574-ds-qo0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pc5-3u-g5D"/>
+                            <constraint firstAttribute="leading" secondItem="sk8-xO-yDT" secondAttribute="leading" constant="-32" id="xHE-dY-rVq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="sk8-xO-yDT" id="1M7-aN-13X"/>
+                        <outlet property="iconView" destination="j7M-mE-S4E" id="0RY-SB-RO0"/>
+                        <outlet property="welcomeLabel" destination="574-ds-qo0" id="Fjv-AN-DpY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
         <!--TweetListTableViewController-->
         <scene sceneID="col-pM-6P3">

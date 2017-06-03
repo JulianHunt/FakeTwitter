@@ -10,6 +10,10 @@
 
 @interface LoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
 @end
 
 @implementation LoginViewController

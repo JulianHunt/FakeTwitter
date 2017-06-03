@@ -84,17 +84,14 @@
 		B7060DA71EE35CCB00277ED3 /* FakeTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				B7060DD01EE35E5400277ED3 /* Features */,
 				B7060DAB1EE35CCB00277ED3 /* AppDelegate.h */,
 				B7060DAC1EE35CCB00277ED3 /* AppDelegate.m */,
-				B7060DAE1EE35CCB00277ED3 /* LoginViewController.h */,
-				B7060DAF1EE35CCB00277ED3 /* LoginViewController.m */,
 				B7060DB11EE35CCB00277ED3 /* Main.storyboard */,
 				B7060DB41EE35CCB00277ED3 /* Assets.xcassets */,
 				B7060DB61EE35CCB00277ED3 /* LaunchScreen.storyboard */,
 				B7060DB91EE35CCB00277ED3 /* Info.plist */,
 				B7060DA81EE35CCB00277ED3 /* Supporting Files */,
-				B7060DCD1EE35E0C00277ED3 /* TweetListTableViewController.h */,
-				B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */,
 			);
 			path = FakeTwitter;
 			sourceTree = "<group>";
@@ -114,6 +111,49 @@
 				B7060DC41EE35CCB00277ED3 /* Info.plist */,
 			);
 			path = FakeTwitterTests;
+			sourceTree = "<group>";
+		};
+		B7060DD01EE35E5400277ED3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B7060DD21EE35E7200277ED3 /* ViewTweets */,
+				B7060DD11EE35E6900277ED3 /* Login */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		B7060DD11EE35E6900277ED3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B7060DD31EE35F5000277ED3 /* ViewControllers */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B7060DD21EE35E7200277ED3 /* ViewTweets */ = {
+			isa = PBXGroup;
+			children = (
+				B7060DD41EE35F5B00277ED3 /* ViewControllers */,
+			);
+			name = ViewTweets;
+			sourceTree = "<group>";
+		};
+		B7060DD31EE35F5000277ED3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7060DAE1EE35CCB00277ED3 /* LoginViewController.h */,
+				B7060DAF1EE35CCB00277ED3 /* LoginViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B7060DD41EE35F5B00277ED3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7060DCD1EE35E0C00277ED3 /* TweetListTableViewController.h */,
+				B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
