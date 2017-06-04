@@ -24,7 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.x
+    _welcomeLabel.text = @"Welcome to Fake Twitter";
+    _descriptionLabel.text = @"Check out my l33t iOS skills XD";
 }
 
 
@@ -38,6 +40,7 @@
         [self animateLoginFields];
     } else {
         //Attempt login here
+        [self attemptLogin];
     }
 }
 
@@ -50,6 +53,29 @@
         _usernameTextField.hidden = NO;
         _passwordTextField.hidden = NO;
     }];
+}
+
+/*
+    AttempLogin: Attempts a login call async and displays loading screen
+ */
+- (void)attemptLogin
+{
+    // TODO: Implement network calls
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        BOOL loginSuccess = YES;
+        // Attempt login here
+        
+        if (loginSuccess) {
+            [self succesfullLogin];
+        }
+        
+    });
+}
+
+- (void)succesfullLogin
+{
+    // Push to new view here
+    [self performSegueWithIdentifier:@"homeSegue" sender:self];
 }
 
 
