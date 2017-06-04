@@ -35,7 +35,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-pP-djC">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-pP-djC">
                                 <subviews>
                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itd-KV-7l2">
                                         <nil key="textColor"/>
@@ -72,10 +72,10 @@
                         <color key="backgroundColor" red="0.072889895858135878" green="0.6352823730705125" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leading" secondItem="bYk-pP-djC" secondAttribute="leading" constant="-32" id="35D-Mw-IYt"/>
+                            <constraint firstItem="j7M-mE-S4E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="4gM-Kz-ZS9"/>
                             <constraint firstItem="sk8-xO-yDT" firstAttribute="top" secondItem="574-ds-qo0" secondAttribute="bottom" constant="8" id="Fj9-yR-wxs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bYk-pP-djC" secondAttribute="bottom" constant="32" id="GB4-Y0-vbu"/>
                             <constraint firstAttribute="leading" secondItem="j7M-mE-S4E" secondAttribute="leading" constant="-32" id="U2O-U2-I5w"/>
-                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="j7M-mE-S4E" secondAttribute="top" constant="-24" id="V6b-un-UyU"/>
                             <constraint firstItem="574-ds-qo0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-8" id="Y37-K4-02C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sk8-xO-yDT" secondAttribute="trailing" constant="155" id="gpa-3h-d4X"/>
                             <constraint firstAttribute="leading" secondItem="574-ds-qo0" secondAttribute="leading" constant="-32" id="k0d-Wa-qNC"/>
@@ -87,6 +87,7 @@
                     <navigationItem key="navigationItem" id="umO-xq-h4D"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="sk8-xO-yDT" id="1M7-aN-13X"/>
+                        <outlet property="iconTopConstraint" destination="4gM-Kz-ZS9" id="85c-xJ-AIh"/>
                         <outlet property="iconView" destination="j7M-mE-S4E" id="0RY-SB-RO0"/>
                         <outlet property="logInButton" destination="vEj-SD-8mW" id="lE9-Hi-Czl"/>
                         <outlet property="passwordTextField" destination="pwF-WY-f3c" id="6gw-If-Mbs"/>
