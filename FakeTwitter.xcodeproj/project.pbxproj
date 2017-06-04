@@ -20,6 +20,12 @@
 		B7060DDE1EE3865F00277ED3 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7060DDC1EE3865F00277ED3 /* TweetTableViewCell.xib */; };
 		B7060DE31EE495BA00277ED3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7060DE21EE495BA00277ED3 /* Realm.framework */; };
 		B7060DE41EE495BA00277ED3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7060DE21EE495BA00277ED3 /* Realm.framework */; };
+		B7747D161EE4988100ADDFC9 /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D151EE4988100ADDFC9 /* TweetModel.m */; };
+		B7747D171EE4988100ADDFC9 /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D151EE4988100ADDFC9 /* TweetModel.m */; };
+		B7747D191EE4A26500ADDFC9 /* egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7747D181EE4A26500ADDFC9 /* egg.jpg */; };
+		B7747D1A1EE4A26500ADDFC9 /* egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7747D181EE4A26500ADDFC9 /* egg.jpg */; };
+		B7747D1D1EE4A46800ADDFC9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7747D1C1EE4A46800ADDFC9 /* libc++.tbd */; };
+		B7747D1F1EE4A47200ADDFC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7747D1E1EE4A47200ADDFC9 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,11 @@
 		B7060DDB1EE3865F00277ED3 /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
 		B7060DDC1EE3865F00277ED3 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		B7060DE21EE495BA00277ED3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B7747D141EE4988100ADDFC9 /* TweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetModel.h; sourceTree = "<group>"; };
+		B7747D151EE4988100ADDFC9 /* TweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetModel.m; sourceTree = "<group>"; };
+		B7747D181EE4A26500ADDFC9 /* egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg.jpg; sourceTree = "<group>"; };
+		B7747D1C1EE4A46800ADDFC9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B7747D1E1EE4A47200ADDFC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7747D1F1EE4A47200ADDFC9 /* libz.tbd in Frameworks */,
+				B7747D1D1EE4A46800ADDFC9 /* libc++.tbd in Frameworks */,
 				B7060DE31EE495BA00277ED3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +96,7 @@
 				B7060DA71EE35CCB00277ED3 /* FakeTwitter */,
 				B7060DC11EE35CCB00277ED3 /* FakeTwitterTests */,
 				B7060DA61EE35CCB00277ED3 /* Products */,
+				B7747D1B1EE4A46700ADDFC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +112,13 @@
 		B7060DA71EE35CCB00277ED3 /* FakeTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				B7747D131EE4986300ADDFC9 /* Models */,
 				B7060DD01EE35E5400277ED3 /* Features */,
 				B7060DAB1EE35CCB00277ED3 /* AppDelegate.h */,
 				B7060DAC1EE35CCB00277ED3 /* AppDelegate.m */,
 				B7060DB11EE35CCB00277ED3 /* Main.storyboard */,
 				B7060DB41EE35CCB00277ED3 /* Assets.xcassets */,
+				B7747D181EE4A26500ADDFC9 /* egg.jpg */,
 				B7060DB61EE35CCB00277ED3 /* LaunchScreen.storyboard */,
 				B7060DB91EE35CCB00277ED3 /* Info.plist */,
 				B7060DA81EE35CCB00277ED3 /* Supporting Files */,
@@ -191,6 +207,24 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		B7747D131EE4986300ADDFC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7747D141EE4988100ADDFC9 /* TweetModel.h */,
+				B7747D151EE4988100ADDFC9 /* TweetModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B7747D1B1EE4A46700ADDFC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7747D1E1EE4A47200ADDFC9 /* libz.tbd */,
+				B7747D1C1EE4A46800ADDFC9 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +310,7 @@
 				B7060DB81EE35CCB00277ED3 /* LaunchScreen.storyboard in Resources */,
 				B7060DB51EE35CCB00277ED3 /* Assets.xcassets in Resources */,
 				B7060DB31EE35CCB00277ED3 /* Main.storyboard in Resources */,
+				B7747D191EE4A26500ADDFC9 /* egg.jpg in Resources */,
 				B7060DDE1EE3865F00277ED3 /* TweetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7747D1A1EE4A26500ADDFC9 /* egg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +336,7 @@
 				B7060DD91EE3836500277ED3 /* HomeViewController.m in Sources */,
 				B7060DAA1EE35CCB00277ED3 /* main.m in Sources */,
 				B7060DDD1EE3865F00277ED3 /* TweetTableViewCell.m in Sources */,
+				B7747D161EE4988100ADDFC9 /* TweetModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7060DC31EE35CCB00277ED3 /* FakeTwitterTests.m in Sources */,
+				B7747D171EE4988100ADDFC9 /* TweetModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +548,7 @@
 				B7060DC91EE35CCB00277ED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7060DCA1EE35CCB00277ED3 /* Build configuration list for PBXNativeTarget "FakeTwitterTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +557,7 @@
 				B7060DCC1EE35CCB00277ED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
