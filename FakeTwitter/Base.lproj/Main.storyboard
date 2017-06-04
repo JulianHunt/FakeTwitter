@@ -24,7 +24,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-mE-S4E">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterBird.png" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-mE-S4E">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="6uw-Uv-m2w"/>
                                     <constraint firstAttribute="height" constant="60" id="wgi-3C-29G"/>
@@ -75,7 +75,7 @@
                             <constraint firstItem="sk8-xO-yDT" firstAttribute="top" secondItem="574-ds-qo0" secondAttribute="bottom" constant="8" id="Fj9-yR-wxs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bYk-pP-djC" secondAttribute="bottom" constant="32" id="GB4-Y0-vbu"/>
                             <constraint firstAttribute="leading" secondItem="j7M-mE-S4E" secondAttribute="leading" constant="-32" id="U2O-U2-I5w"/>
-                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="j7M-mE-S4E" secondAttribute="top" constant="8" id="V6b-un-UyU"/>
+                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="j7M-mE-S4E" secondAttribute="top" constant="-24" id="V6b-un-UyU"/>
                             <constraint firstItem="574-ds-qo0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-8" id="Y37-K4-02C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sk8-xO-yDT" secondAttribute="trailing" constant="155" id="gpa-3h-d4X"/>
                             <constraint firstAttribute="leading" secondItem="574-ds-qo0" secondAttribute="leading" constant="-32" id="k0d-Wa-qNC"/>
@@ -206,6 +206,9 @@
             <point key="canvasLocation" x="2816.8000000000002" y="341.37931034482762"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="twitterBird.png" width="300" height="255"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XEb-Vu-CE3"/>
     </inferredMetricsTieBreakers>

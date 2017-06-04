@@ -26,6 +26,8 @@
 		B7747D1A1EE4A26500ADDFC9 /* egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7747D181EE4A26500ADDFC9 /* egg.jpg */; };
 		B7747D1D1EE4A46800ADDFC9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7747D1C1EE4A46800ADDFC9 /* libc++.tbd */; };
 		B7747D1F1EE4A47200ADDFC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7747D1E1EE4A47200ADDFC9 /* libz.tbd */; };
+		B7747D241EE4A6E100ADDFC9 /* twitterBird.png in Resources */ = {isa = PBXBuildFile; fileRef = B7747D231EE4A6E100ADDFC9 /* twitterBird.png */; };
+		B7747D251EE4A6E100ADDFC9 /* twitterBird.png in Resources */ = {isa = PBXBuildFile; fileRef = B7747D231EE4A6E100ADDFC9 /* twitterBird.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		B7747D181EE4A26500ADDFC9 /* egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg.jpg; sourceTree = "<group>"; };
 		B7747D1C1EE4A46800ADDFC9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B7747D1E1EE4A47200ADDFC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B7747D231EE4A6E100ADDFC9 /* twitterBird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterBird.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 				B7060DAC1EE35CCB00277ED3 /* AppDelegate.m */,
 				B7060DB11EE35CCB00277ED3 /* Main.storyboard */,
 				B7060DB41EE35CCB00277ED3 /* Assets.xcassets */,
+				B7747D231EE4A6E100ADDFC9 /* twitterBird.png */,
 				B7747D181EE4A26500ADDFC9 /* egg.jpg */,
 				B7060DB61EE35CCB00277ED3 /* LaunchScreen.storyboard */,
 				B7060DB91EE35CCB00277ED3 /* Info.plist */,
@@ -309,6 +313,7 @@
 			files = (
 				B7060DB81EE35CCB00277ED3 /* LaunchScreen.storyboard in Resources */,
 				B7060DB51EE35CCB00277ED3 /* Assets.xcassets in Resources */,
+				B7747D241EE4A6E100ADDFC9 /* twitterBird.png in Resources */,
 				B7060DB31EE35CCB00277ED3 /* Main.storyboard in Resources */,
 				B7747D191EE4A26500ADDFC9 /* egg.jpg in Resources */,
 				B7060DDE1EE3865F00277ED3 /* TweetTableViewCell.xib in Resources */,
@@ -319,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7747D251EE4A6E100ADDFC9 /* twitterBird.png in Resources */,
 				B7747D1A1EE4A26500ADDFC9 /* egg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
