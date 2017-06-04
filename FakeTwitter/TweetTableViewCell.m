@@ -8,6 +8,16 @@
 
 #import "TweetTableViewCell.h"
 
+@interface TweetTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *accountName;
+@property (weak, nonatomic) IBOutlet UILabel *accountHandle;
+@property (weak, nonatomic) IBOutlet UITextView *tweetContent;
+
+
+@end
+
 @implementation TweetTableViewCell
 
 - (void)awakeFromNib {

@@ -50,6 +50,12 @@
                     <constraint firstItem="1v5-Kb-oLg" firstAttribute="leading" secondItem="b46-6M-VpS" secondAttribute="trailing" constant="8" id="tBI-QU-exM"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="accountHandle" destination="1v5-Kb-oLg" id="JpL-4O-0MX"/>
+                <outlet property="accountName" destination="b46-6M-VpS" id="AGN-Lz-c4T"/>
+                <outlet property="profileImage" destination="2Nd-b1-ZWt" id="4nk-Rk-U3u"/>
+                <outlet property="tweetContent" destination="JAb-bV-0Qc" id="Vvq-0U-GRz"/>
+            </connections>
             <point key="canvasLocation" x="34" y="82.5"/>
         </tableViewCell>
     </objects>
