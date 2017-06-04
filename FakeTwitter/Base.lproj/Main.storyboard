@@ -43,6 +43,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="0.15462647737994617" green="0.4989634169686411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKV-cM-UEE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-fv-R4j">
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -84,6 +87,10 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="sk8-xO-yDT" id="1M7-aN-13X"/>
                         <outlet property="iconView" destination="j7M-mE-S4E" id="0RY-SB-RO0"/>
+                        <outlet property="logInButton" destination="vEj-SD-8mW" id="lE9-Hi-Czl"/>
+                        <outlet property="passwordTextField" destination="pwF-WY-f3c" id="6gw-If-Mbs"/>
+                        <outlet property="signInButton" destination="CdX-fv-R4j" id="fil-Oj-EIL"/>
+                        <outlet property="usernameTextField" destination="Itd-KV-7l2" id="o32-cN-WVr"/>
                         <outlet property="welcomeLabel" destination="574-ds-qo0" id="Fjv-AN-DpY"/>
                     </connections>
                 </viewController>
