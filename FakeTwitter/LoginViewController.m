@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconTopConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *iconTopConstraint;
 
 @end
 
@@ -46,6 +46,9 @@
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+- (IBAction)downSwipe:(id)sender {
+    [[self view] endEditing:YES];
 }
 
 #pragma mark - keyboard movements
