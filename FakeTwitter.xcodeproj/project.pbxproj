@@ -15,6 +15,7 @@
 		B7060DB81EE35CCB00277ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7060DB61EE35CCB00277ED3 /* LaunchScreen.storyboard */; };
 		B7060DC31EE35CCB00277ED3 /* FakeTwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DC21EE35CCB00277ED3 /* FakeTwitterTests.m */; };
 		B7060DCF1EE35E0C00277ED3 /* TweetListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */; };
+		B7060DD91EE3836500277ED3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DD81EE3836500277ED3 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		B7060DC41EE35CCB00277ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7060DCD1EE35E0C00277ED3 /* TweetListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetListTableViewController.h; sourceTree = "<group>"; };
 		B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetListTableViewController.m; sourceTree = "<group>"; };
+		B7060DD71EE3836500277ED3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B7060DD81EE3836500277ED3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +119,11 @@
 		B7060DD01EE35E5400277ED3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B7060DD61EE3826A00277ED3 /* Profile */,
 				B7060DD21EE35E7200277ED3 /* ViewTweets */,
 				B7060DD11EE35E6900277ED3 /* Login */,
+				B7060DD71EE3836500277ED3 /* HomeViewController.h */,
+				B7060DD81EE3836500277ED3 /* HomeViewController.m */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 		B7060DD21EE35E7200277ED3 /* ViewTweets */ = {
 			isa = PBXGroup;
 			children = (
+				B7060DD51EE3800A00277ED3 /* TweetTableViewCell */,
 				B7060DD41EE35F5B00277ED3 /* ViewControllers */,
 			);
 			name = ViewTweets;
@@ -154,6 +161,20 @@
 				B7060DCE1EE35E0C00277ED3 /* TweetListTableViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B7060DD51EE3800A00277ED3 /* TweetTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TweetTableViewCell;
+			sourceTree = "<group>";
+		};
+		B7060DD61EE3826A00277ED3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +282,7 @@
 				B7060DB01EE35CCB00277ED3 /* LoginViewController.m in Sources */,
 				B7060DCF1EE35E0C00277ED3 /* TweetListTableViewController.m in Sources */,
 				B7060DAD1EE35CCB00277ED3 /* AppDelegate.m in Sources */,
+				B7060DD91EE3836500277ED3 /* HomeViewController.m in Sources */,
 				B7060DAA1EE35CCB00277ED3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
