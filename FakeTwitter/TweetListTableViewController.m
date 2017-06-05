@@ -8,8 +8,13 @@
 
 #import "TweetListTableViewController.h"
 #import "TweetTableViewCell.h"
+#import "TweetModel.h"
+#import <Realm/Realm.h>
 
 @interface TweetListTableViewController ()
+
+@property (nonatomic, strong) RLMResults *array;
+@property (nonatomic, strong) RLMNotificationToken *notification;
 
 @end
 
@@ -25,12 +30,40 @@
     
     self.refreshControl = refreshControl;
     
+    //SETUP REALM DATA
+    self.array = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:YES];
+    
+    
+    // Set realm notification block
+    __weak typeof(self) weakSelf = self;
+    self.notification = [self.array addNotificationBlock:^(RLMResults *data, RLMCollectionChange *changes, NSError *error) {
+        if (error) {
+            NSLog(@"Failed to open Realm on background worker: %@", error);
+            return;
+        }
+        
+        UITableView *tv = weakSelf.tableView;
+        // Initial run of the query will pass nil for the change information
+        if (!changes) {
+            [tv reloadData];
+            return;
+        }
+        
+        // changes is non-nil, so we just need to update the tableview
+        [tv beginUpdates];
+        [tv deleteRowsAtIndexPaths:[changes deletionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tv insertRowsAtIndexPaths:[changes insertionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tv reloadRowsAtIndexPaths:[changes modificationsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tv endUpdates];
+    }];
+    
     
 }
 - (void)refreshData{
     [self.tableView reloadData];
     [self.refreshControl endRefreshing];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,20 +72,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 10;
+    return self.array.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tweetCell" forIndexPath:indexPath];
+    TweetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tweetCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    TweetModel *tweet = self.array[indexPath.row];
+    cell.accountName.text = tweet.account;
+    cell.accountHandle.text = tweet.handle;
+    cell.tweetContent.text = tweet.tweetContent;
     
     return cell;
 }

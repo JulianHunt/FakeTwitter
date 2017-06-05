@@ -31,8 +31,8 @@
 @implementation LoginViewController
 
 
-#pragma
-#pragma - Lifecycle
+#pragma mark
+#pragma mark - Lifecycle
 
 
 - (void)viewDidLoad {
@@ -62,8 +62,8 @@
 }
 
 
-#pragma 
-#pragma - IBActions
+#pragma mark
+#pragma mark - IBActions
 
 /*
  Method: downSwipe
@@ -88,8 +88,8 @@
 }
 
 
-#pragma 
-#pragma - Animations
+#pragma mark
+#pragma mark - Animations
 
 /*
  Method: animateLoginFields
@@ -107,8 +107,8 @@
 }
 
 
-#pragma 
-#pragma - Helper Methods
+#pragma mark
+#pragma mark - Helper Methods
 
 /*
  Method: attempLogin

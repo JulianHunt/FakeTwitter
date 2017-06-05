@@ -92,7 +92,6 @@
                         <outlet property="iconView" destination="j7M-mE-S4E" id="0RY-SB-RO0"/>
                         <outlet property="logInButton" destination="vEj-SD-8mW" id="lE9-Hi-Czl"/>
                         <outlet property="passwordTextField" destination="pwF-WY-f3c" id="6gw-If-Mbs"/>
-                        <outlet property="signInButton" destination="CdX-fv-R4j" id="fil-Oj-EIL"/>
                         <outlet property="signUpButton" destination="CdX-fv-R4j" id="SJk-pt-Rfq"/>
                         <outlet property="usernameTextField" destination="Itd-KV-7l2" id="o32-cN-WVr"/>
                         <outlet property="welcomeLabel" destination="574-ds-qo0" id="Fjv-AN-DpY"/>
