@@ -57,14 +57,11 @@
                                             <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKV-cM-UEE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-fv-R4j">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-fv-R4j" userLabel="Sign Up Button">
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="qWQ-ib-O7M" kind="show" id="E9G-FM-Ajm"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -96,6 +93,7 @@
                         <outlet property="logInButton" destination="vEj-SD-8mW" id="lE9-Hi-Czl"/>
                         <outlet property="passwordTextField" destination="pwF-WY-f3c" id="6gw-If-Mbs"/>
                         <outlet property="signInButton" destination="CdX-fv-R4j" id="fil-Oj-EIL"/>
+                        <outlet property="signUpButton" destination="CdX-fv-R4j" id="SJk-pt-Rfq"/>
                         <outlet property="usernameTextField" destination="Itd-KV-7l2" id="o32-cN-WVr"/>
                         <outlet property="welcomeLabel" destination="574-ds-qo0" id="Fjv-AN-DpY"/>
                         <segue destination="qWQ-ib-O7M" kind="show" identifier="homeSegue" id="XEb-Vu-CE3"/>
@@ -219,7 +217,4 @@
     <resources>
         <image name="twitterBird.png" width="300" height="255"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="XEb-Vu-CE3"/>
-    </inferredMetricsTieBreakers>
 </document>

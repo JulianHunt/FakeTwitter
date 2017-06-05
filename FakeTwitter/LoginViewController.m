@@ -10,11 +10,18 @@
 
 @interface LoginViewController ()
 
+// Icon view that displays the twitter logo
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
+
+// Label that displays the welcome text
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+
+// Label that displays the description text
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+// Triggers the login sequence
 @property (weak, nonatomic) IBOutlet UIButton *logInButton;
-@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *iconTopConstraint;
@@ -23,57 +30,53 @@
 
 @implementation LoginViewController
 
+
+#pragma
+#pragma - Lifecycle
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.x
     _welcomeLabel.text = @"Welcome to Fake Twitter";
     _descriptionLabel.text = @"Check out my l33t iOS skills XD";
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    // Add the observer for when the keyboard appears and disappears
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
+    // Remove the observer for when the keyboard appears and disappears
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
+
+
+#pragma 
+#pragma - IBActions
+
+/*
+ Method: downSwipe
+ Purpose: Called when a downward swipe gesture is recognized
+ */
 - (IBAction)downSwipe:(id)sender {
     [[self view] endEditing:YES];
 }
 
-#pragma mark - keyboard movements
-- (void)keyboardWillShow:(NSNotification *)notification
-{
-    _iconTopConstraint.active = NO;
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        CGRect f = self.view.frame;
-        f.origin.y = -keyboardSize.height;
-        self.view.frame = f;
-    }];
-}
-
--(void)keyboardWillHide:(NSNotification *)notification
-{
-    _iconTopConstraint.active = YES;
-    [UIView animateWithDuration:0.3 animations:^{
-        CGRect f = self.view.frame;
-        f.origin.y = 0.0f;
-        self.view.frame = f;
-    }];
-}
-
+/*
+ Method: loginAction
+ Purpose: Called when the login button is pressed
+ */
 - (IBAction)loginAction:(id)sender {
     // If text fields are hidden animate them into stack view, otherwise attempt to login
     if (_usernameTextField.hidden) {
@@ -84,10 +87,18 @@
     }
 }
 
+
+#pragma 
+#pragma - Animations
+
+/*
+ Method: animateLoginFields
+ Purpose: Animate the login fields in the stack View
+ */
 - (void)animateLoginFields
 {
     [UIView animateWithDuration:0.3 animations:^{
-        _signInButton.hidden = YES;
+        _signUpButton.hidden = YES;
     }];
     [UIView animateWithDuration:0.3 animations:^{
         _usernameTextField.hidden = NO;
@@ -95,8 +106,13 @@
     }];
 }
 
+
+#pragma 
+#pragma - Helper Methods
+
 /*
-    AttempLogin: Attempts a login call async and displays loading screen
+ Method: attempLogin
+ Purpose: Attempts a async login call  and displays loading screen
  */
 - (void)attemptLogin
 {
@@ -112,10 +128,47 @@
     });
 }
 
+/*
+ Method: succesfullLogin
+ Purpose: Called on login success to segue to the next view
+ */
 - (void)succesfullLogin
 {
     // Push to new view here
     [self performSegueWithIdentifier:@"homeSegue" sender:self];
+}
+
+/*
+ Method: keyboardWillShow
+ Purpose: Called when the keyboard appears to move view up
+ */
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    // Disable the upper constraint so the icon moves up with the keyboard
+    _iconTopConstraint.active = NO;
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect f = self.view.frame;
+        f.origin.y = -keyboardSize.height;
+        self.view.frame = f;
+    }];
+}
+
+
+/*
+ Method: keyboardWillHide
+ Purpose: Called when the keyboard disappears to move view down
+ */
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+    // Re-enable the upper constraint so the icon moves down with the keyboard
+    _iconTopConstraint.active = YES;
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect f = self.view.frame;
+        f.origin.y = 0.0f;
+        self.view.frame = f;
+    }];
 }
 
 
