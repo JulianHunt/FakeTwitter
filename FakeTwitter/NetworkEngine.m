@@ -13,12 +13,7 @@
 
 
 
-/**
- Retrieves the list of tweets to display from the server
- Note: This actually just makes fake data as there is no server to connect too
 
- @return The list of tweets retrieved from the server.
- */
 - (NSMutableArray *)getTweetListFromServer
 {
     NSMutableArray * list;
@@ -61,7 +56,6 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         return YES;
     }
-    
     return NO;
 }
 
