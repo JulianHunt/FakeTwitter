@@ -18,8 +18,6 @@
 		B7060DD91EE3836500277ED3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DD81EE3836500277ED3 /* HomeViewController.m */; };
 		B7060DDD1EE3865F00277ED3 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7060DDB1EE3865F00277ED3 /* TweetTableViewCell.m */; };
 		B7060DDE1EE3865F00277ED3 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7060DDC1EE3865F00277ED3 /* TweetTableViewCell.xib */; };
-		B7060DE31EE495BA00277ED3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7060DE21EE495BA00277ED3 /* Realm.framework */; };
-		B7060DE41EE495BA00277ED3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7060DE21EE495BA00277ED3 /* Realm.framework */; };
 		B7747D161EE4988100ADDFC9 /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D151EE4988100ADDFC9 /* TweetModel.m */; };
 		B7747D171EE4988100ADDFC9 /* TweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D151EE4988100ADDFC9 /* TweetModel.m */; };
 		B7747D191EE4A26500ADDFC9 /* egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7747D181EE4A26500ADDFC9 /* egg.jpg */; };
@@ -30,6 +28,7 @@
 		B7747D251EE4A6E100ADDFC9 /* twitterBird.png in Resources */ = {isa = PBXBuildFile; fileRef = B7747D231EE4A6E100ADDFC9 /* twitterBird.png */; };
 		B7747D291EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
 		B7747D2A1EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
+		B790BC781EE7734600B57191 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B790BC771EE7734600B57191 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 		B7060DDA1EE3865F00277ED3 /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
 		B7060DDB1EE3865F00277ED3 /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
 		B7060DDC1EE3865F00277ED3 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
-		B7060DE21EE495BA00277ED3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B7747D141EE4988100ADDFC9 /* TweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetModel.h; sourceTree = "<group>"; };
 		B7747D151EE4988100ADDFC9 /* TweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetModel.m; sourceTree = "<group>"; };
 		B7747D181EE4A26500ADDFC9 /* egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg.jpg; sourceTree = "<group>"; };
@@ -72,6 +70,7 @@
 		B7747D231EE4A6E100ADDFC9 /* twitterBird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterBird.png; sourceTree = "<group>"; };
 		B7747D271EE7585100ADDFC9 /* NetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine.h; sourceTree = "<group>"; };
 		B7747D281EE7585100ADDFC9 /* NetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine.m; sourceTree = "<group>"; };
+		B790BC771EE7734600B57191 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B790BC781EE7734600B57191 /* Realm.framework in Frameworks */,
 				B7747D1F1EE4A47200ADDFC9 /* libz.tbd in Frameworks */,
 				B7747D1D1EE4A46800ADDFC9 /* libc++.tbd in Frameworks */,
-				B7060DE31EE495BA00277ED3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7060DE41EE495BA00277ED3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +97,7 @@
 		B7060D9C1EE35CCA00277ED3 = {
 			isa = PBXGroup;
 			children = (
-				B7060DE21EE495BA00277ED3 /* Realm.framework */,
+				B790BC771EE7734600B57191 /* Realm.framework */,
 				B7060DA71EE35CCB00277ED3 /* FakeTwitter */,
 				B7060DC11EE35CCB00277ED3 /* FakeTwitterTests */,
 				B7060DA61EE35CCB00277ED3 /* Products */,

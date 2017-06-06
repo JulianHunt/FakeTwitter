@@ -14,14 +14,16 @@
 
 
 
-+ (NSMutableArray *)getTweetListFromServer
++ (RLMResults *)getTweetListFromServer
 {
-    NSMutableArray * list;
+    RLMResults * list;
     
     if([self isFirstLaunch]){
-        list = [self createInitialFakeData];
+        [self createInitialFakeData];
+        list = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:NO];
     }else{
         // Get new data from server and append to current stored list, or replace current list if we don't care about keeping the old data locally. Would reduce disk space used by app to only store the last list of displayed tweets and replace the old one.
+        list = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:NO];
     }
     
     return list;
@@ -59,17 +61,14 @@
     return NO;
 }
 
-+ (NSMutableArray *)createInitialFakeData
++ (void)createInitialFakeData
 {
-    NSMutableArray * initialData;
-    
     RLMRealm *realm = RLMRealm.defaultRealm;
     [realm beginWriteTransaction];
     for(NSInteger i = 0; i < 20; i++){
-        [initialData addObject:[TweetModel createInRealm:realm withValue:@[@"RandomPerson", @"random_person",@"This is a boring tweet.",[NSDate date]]]];
+        [TweetModel createInRealm:realm withValue:@[@"RandomPerson", @"@random_person",@"This is a boring tweet.",[NSDate date]]];
     }
     [realm commitWriteTransaction];
-    return initialData;
 }
 
 

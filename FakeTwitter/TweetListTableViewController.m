@@ -33,8 +33,13 @@
     
     //SETUP REALM DATA
     
-    // Load local data and then make an async call to load new data
-    self.array = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:YES];
+    // Load local data
+    self.array = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:NO];
+    
+    // Then make an async call to load new data
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.array = [NetworkEngine getTweetListFromServer];
+    });
     
     
     
