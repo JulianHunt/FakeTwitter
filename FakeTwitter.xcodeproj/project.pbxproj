@@ -28,6 +28,8 @@
 		B7747D1F1EE4A47200ADDFC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7747D1E1EE4A47200ADDFC9 /* libz.tbd */; };
 		B7747D241EE4A6E100ADDFC9 /* twitterBird.png in Resources */ = {isa = PBXBuildFile; fileRef = B7747D231EE4A6E100ADDFC9 /* twitterBird.png */; };
 		B7747D251EE4A6E100ADDFC9 /* twitterBird.png in Resources */ = {isa = PBXBuildFile; fileRef = B7747D231EE4A6E100ADDFC9 /* twitterBird.png */; };
+		B7747D291EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
+		B7747D2A1EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		B7747D1C1EE4A46800ADDFC9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B7747D1E1EE4A47200ADDFC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B7747D231EE4A6E100ADDFC9 /* twitterBird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterBird.png; sourceTree = "<group>"; };
+		B7747D271EE7585100ADDFC9 /* NetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine.h; sourceTree = "<group>"; };
+		B7747D281EE7585100ADDFC9 /* NetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		B7060DA71EE35CCB00277ED3 /* FakeTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				B7747D261EE622F300ADDFC9 /* Networking */,
 				B7747D131EE4986300ADDFC9 /* Models */,
 				B7060DD01EE35E5400277ED3 /* Features */,
 				B7060DAB1EE35CCB00277ED3 /* AppDelegate.h */,
@@ -229,6 +234,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B7747D261EE622F300ADDFC9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B7747D271EE7585100ADDFC9 /* NetworkEngine.h */,
+				B7747D281EE7585100ADDFC9 /* NetworkEngine.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +352,7 @@
 			files = (
 				B7060DB01EE35CCB00277ED3 /* LoginViewController.m in Sources */,
 				B7060DCF1EE35E0C00277ED3 /* TweetListTableViewController.m in Sources */,
+				B7747D291EE7585100ADDFC9 /* NetworkEngine.m in Sources */,
 				B7060DAD1EE35CCB00277ED3 /* AppDelegate.m in Sources */,
 				B7060DD91EE3836500277ED3 /* HomeViewController.m in Sources */,
 				B7060DAA1EE35CCB00277ED3 /* main.m in Sources */,
@@ -350,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7747D2A1EE7585100ADDFC9 /* NetworkEngine.m in Sources */,
 				B7060DC31EE35CCB00277ED3 /* FakeTwitterTests.m in Sources */,
 				B7747D171EE4988100ADDFC9 /* TweetModel.m in Sources */,
 			);

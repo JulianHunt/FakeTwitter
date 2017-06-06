@@ -31,6 +31,8 @@
     self.refreshControl = refreshControl;
     
     //SETUP REALM DATA
+    
+    // Load local data and then make an async call to load new data
     self.array = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:YES];
     
     
