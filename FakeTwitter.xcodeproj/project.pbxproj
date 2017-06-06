@@ -28,7 +28,7 @@
 		B7747D251EE4A6E100ADDFC9 /* twitterBird.png in Resources */ = {isa = PBXBuildFile; fileRef = B7747D231EE4A6E100ADDFC9 /* twitterBird.png */; };
 		B7747D291EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
 		B7747D2A1EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
-		B790BC781EE7734600B57191 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B790BC771EE7734600B57191 /* Realm.framework */; };
+		B790BC7A1EE7774A00B57191 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B790BC791EE7774A00B57191 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 		B7747D231EE4A6E100ADDFC9 /* twitterBird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterBird.png; sourceTree = "<group>"; };
 		B7747D271EE7585100ADDFC9 /* NetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine.h; sourceTree = "<group>"; };
 		B7747D281EE7585100ADDFC9 /* NetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine.m; sourceTree = "<group>"; };
-		B790BC771EE7734600B57191 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B790BC791EE7774A00B57191 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B790BC781EE7734600B57191 /* Realm.framework in Frameworks */,
+				B790BC7A1EE7774A00B57191 /* Realm.framework in Frameworks */,
 				B7747D1F1EE4A47200ADDFC9 /* libz.tbd in Frameworks */,
 				B7747D1D1EE4A46800ADDFC9 /* libc++.tbd in Frameworks */,
 			);
@@ -97,7 +97,7 @@
 		B7060D9C1EE35CCA00277ED3 = {
 			isa = PBXGroup;
 			children = (
-				B790BC771EE7734600B57191 /* Realm.framework */,
+				B790BC791EE7774A00B57191 /* Realm.framework */,
 				B7060DA71EE35CCB00277ED3 /* FakeTwitter */,
 				B7060DC11EE35CCB00277ED3 /* FakeTwitterTests */,
 				B7060DA61EE35CCB00277ED3 /* Products */,
