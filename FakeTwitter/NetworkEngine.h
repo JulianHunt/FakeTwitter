@@ -18,7 +18,7 @@
  
  @return The list of tweets retrieved from the server.
  */
-- (RLMResults *)getTweetListFromServer;
++ (RLMResults *)getTweetListFromServer;
 
 /**
  Authenticates user login
@@ -28,7 +28,7 @@
 
  @return if the combination of username and password are valid login credentials
  */
-- (BOOL)authenticateLoginForUser:(NSString *)username withPassword: (NSString *)password;
++ (BOOL)authenticateLoginForUser:(NSString *)username withPassword: (NSString *)password;
 
 
 /**
@@ -36,6 +36,6 @@
 
  @param tweet The TweetModel representing the tweet to be posted
  */
-- (void)postTweetToServer: (TweetModel *) tweet;
++ (void)postTweetToServer: (TweetModel *) tweet;
 
 @end

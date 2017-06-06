@@ -10,7 +10,7 @@
 #import "TweetTableViewCell.h"
 #import "TweetModel.h"
 #import <Realm/Realm.h>
-#import "NetworkEngin.h"
+#import "NetworkEngine.h"
 
 @interface TweetListTableViewController ()
 
@@ -35,6 +35,7 @@
     
     // Load local data and then make an async call to load new data
     self.array = [[TweetModel allObjects] sortedResultsUsingKeyPath:@"postDate" ascending:YES];
+    
     
     
     // Set realm notification block

@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "NetworkEngine.h"
 
 @interface LoginViewController ()
 
@@ -21,10 +22,21 @@
 
 // Triggers the login sequence
 @property (weak, nonatomic) IBOutlet UIButton *logInButton;
+
+// Triggers sign up sequence (currently a bypass to get to table view)
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+
+// Takes the users username as input
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+
+// Secure Text field for taking the password as input
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+// Constraint for helping the top icon disappear when the keyboard appears
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *iconTopConstraint;
+
+// Label to be shown when there is a login error
+@property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
 
 @end
 
@@ -118,11 +130,12 @@
 {
     // TODO: Implement network calls
     dispatch_async(dispatch_get_main_queue(), ^{
-        BOOL loginSuccess = YES;
-        // Attempt login here
-        sleep(3);
+        BOOL loginSuccess = [NetworkEngine authenticateLoginForUser:[_usernameTextField text]
+                                                       withPassword:[_passwordTextField text]];
         if (loginSuccess) {
             [self succesfullLogin];
+        }else{
+            _loginErrorLabel.hidden = NO;
         }
         
     });

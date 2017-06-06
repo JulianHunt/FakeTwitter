@@ -14,7 +14,7 @@
 
 
 
-- (NSMutableArray *)getTweetListFromServer
++ (NSMutableArray *)getTweetListFromServer
 {
     NSMutableArray * list;
     
@@ -27,7 +27,7 @@
     return list;
 }
 
-- (void)postTweetToServer: (TweetModel *) tweet
++ (void)postTweetToServer: (TweetModel *) tweet
 {
     RLMRealm *realm = RLMRealm.defaultRealm;
     [realm beginWriteTransaction];
@@ -35,7 +35,7 @@
     [realm commitWriteTransaction];
 }
 
-- (BOOL)authenticateLoginForUser:(NSString *)username withPassword: (NSString *)password
++ (BOOL)authenticateLoginForUser:(NSString *)username withPassword: (NSString *)password
 {
     // This is where you would encrypt the username and password before sending it to the server for authentication. Since we don't have a server we are just going to check the strings locally
     
@@ -48,7 +48,7 @@
 #pragma mark
 #pragma mark - Helper Method
 
-- (BOOL)isFirstLaunch
++ (BOOL)isFirstLaunch
 {
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
     {
@@ -59,7 +59,7 @@
     return NO;
 }
 
-- (NSMutableArray *)createInitialFakeData
++ (NSMutableArray *)createInitialFakeData
 {
     NSMutableArray * initialData;
     
