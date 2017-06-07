@@ -50,7 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _welcomeLabel.text = @"Welcome to Fake Twitter";
-    _descriptionLabel.text = @"Check out my l33t iOS skills XD";
+    _descriptionLabel.text = @"Check out my what the world is saying!";
 }
 
 - (void)didReceiveMemoryWarning {

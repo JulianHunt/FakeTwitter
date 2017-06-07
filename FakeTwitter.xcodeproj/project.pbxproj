@@ -29,6 +29,7 @@
 		B7747D291EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
 		B7747D2A1EE7585100ADDFC9 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B7747D281EE7585100ADDFC9 /* NetworkEngine.m */; };
 		B790BC7A1EE7774A00B57191 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B790BC791EE7774A00B57191 /* Realm.framework */; };
+		B7F8F84E1EE788B2002EC9E6 /* PostTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F8F84D1EE788B2002EC9E6 /* PostTweetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		B7747D271EE7585100ADDFC9 /* NetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine.h; sourceTree = "<group>"; };
 		B7747D281EE7585100ADDFC9 /* NetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine.m; sourceTree = "<group>"; };
 		B790BC791EE7774A00B57191 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B7F8F84C1EE788B2002EC9E6 /* PostTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTweetViewController.h; sourceTree = "<group>"; };
+		B7F8F84D1EE788B2002EC9E6 /* PostTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTweetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 			children = (
 				B7060DAE1EE35CCB00277ED3 /* LoginViewController.h */,
 				B7060DAF1EE35CCB00277ED3 /* LoginViewController.m */,
+				B7F8F84C1EE788B2002EC9E6 /* PostTweetViewController.h */,
+				B7F8F84D1EE788B2002EC9E6 /* PostTweetViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				B7060DD91EE3836500277ED3 /* HomeViewController.m in Sources */,
 				B7060DAA1EE35CCB00277ED3 /* main.m in Sources */,
 				B7060DDD1EE3865F00277ED3 /* TweetTableViewCell.m in Sources */,
+				B7F8F84E1EE788B2002EC9E6 /* PostTweetViewController.m in Sources */,
 				B7747D161EE4988100ADDFC9 /* TweetModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
